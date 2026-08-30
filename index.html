@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farhan Tanvir | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#e8e3dc;--paper:#f4f1ec;--ink:#111214;--muted:#5f6062;--line:rgba(17,18,20,.12)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:"DM Sans",sans-serif;color:var(--ink);background:#30312f}
+a{color:inherit;text-decoration:none}.page{width:min(1240px,calc(100% - 36px));margin:48px auto;background:var(--bg);overflow:hidden}
+nav{height:72px;padding:0 66px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.logo{font:700 21px "Manrope";letter-spacing:-1px}.links{display:flex;gap:34px;font-size:14px}.start{font-weight:700}
+.hero{min-height:680px;position:relative;overflow:hidden;background:var(--bg)}
+.hero-copy{position:relative;z-index:3;width:51%;padding:76px 0 0 66px}.hero h1{font:700 clamp(55px,6.2vw,88px)/.98 "Manrope";letter-spacing:-5px}
+.hero-sub{margin-top:32px;max-width:400px;font-size:19px;line-height:1.55;color:#3d3e40}.cta{margin-top:28px;display:inline-flex;gap:14px;font-size:18px;font-weight:700;padding-bottom:6px;border-bottom:1px solid var(--ink)}
+.availability{position:absolute;left:66px;bottom:46px;z-index:5;display:flex;align-items:center;gap:11px;padding:10px 20px;border-radius:99px;background:#f7f7f7;font-weight:600}.dot{width:13px;height:13px;border-radius:50%;background:#18b529}
+.hero-portrait{position:absolute;inset:0 0 0 43%;z-index:1;background:linear-gradient(90deg,var(--bg) 0%,rgba(232,227,220,.25) 32%,rgba(232,227,220,0) 60%),url("images/profile.jpg");background-size:cover;background-position:center}
+.stats{position:absolute;z-index:5;right:0;bottom:0;width:465px;height:120px;background:rgba(250,250,250,.92);display:grid;grid-template-columns:1fr 1fr;align-items:center;text-align:center}
+.stat+.stat{border-left:1px solid var(--line)}.stat span{display:block;font-size:14px;margin-bottom:9px}.stat strong{font:700 26px "Manrope"}
+section{padding:90px 66px;background:var(--paper)}.kicker{font-size:13px;color:var(--muted);margin-bottom:10px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px}h2{font:700 clamp(40px,5vw,64px)/1 "Manrope";letter-spacing:-3px}.view-all{font-weight:600;border-bottom:1px solid var(--ink);padding-bottom:4px}
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}.service{min-height:190px;padding:24px;border:1px solid rgba(0,0,0,.07);border-radius:14px;background:rgba(255,255,255,.45)}.icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:#e9e2d2;font-size:22px;margin-bottom:24px}.service h3{font:700 19px "Manrope";margin-bottom:8px}.service p{font-size:14px;line-height:1.55;color:var(--muted)}
+.portfolio{background:#111214;color:#fff}.portfolio .kicker{color:#aaa}.portfolio-grid{margin-top:48px;display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.project{height:360px;border-radius:16px;overflow:hidden;position:relative;background:#333}.project img{width:100%;height:100%;object-fit:cover;transition:transform .35s}.project:hover img{transform:scale(1.05)}.project-info{position:absolute;inset:auto 0 0 0;padding:70px 28px 28px;background:linear-gradient(transparent,rgba(0,0,0,.85))}.project-info small{color:#ddd}.project-info h3{font:700 29px "Manrope";margin-top:7px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:80px}.about p{font-size:20px;line-height:1.65;color:#3d3e40}.contact{text-align:center;background:#ddd6cc}.contact h2{max-width:760px;margin:auto}.contact p{margin:24px auto;max-width:560px;color:var(--muted);font-size:18px;line-height:1.6}.contact-btn{display:inline-flex;gap:12px;padding:16px 24px;border-radius:8px;background:#111214;color:#fff;font-weight:700}
+footer{padding:28px 66px;background:#111214;color:#eee;display:flex;justify-content:space-between;font-size:14px}
+@media(max-width:900px){.page{width:100%;margin:0}nav{padding:0 24px}.links{display:none}.hero-copy{width:100%;padding:60px 28px}.hero-portrait{inset:260px 0 0 0;opacity:.72}.availability{left:28px;bottom:145px}section{padding:70px 28px}.services{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr;gap:25px}footer{padding:24px 28px}}
+@media(max-width:560px){.start{font-size:12px}.hero h1{letter-spacing:-3px}.services,.portfolio-grid{grid-template-columns:1fr}.stats{width:100%;height:105px}.section-head{align-items:start;flex-direction:column}footer{flex-direction:column;gap:8px}}
+</style>
+</head>
+<body>
+<div class="page">
+<nav>
+  <!-- Farhan Tanvir -->
+  <a class="logo" href="#home">Farhan Tanvir.</a>
+  <div class="links"><a href="#work">Work</a><a href="#about">About</a><a href="#services">Services</a><a href="#contact">Contact</a></div>
+  <a class="start" href="#contact">Let's Work Together ↗</a>
+</nav>
+
+<main id="home">
+<section class="hero">
+  <div class="hero-copy">
+    <!-- CHANGE YOUR PROFESSION HERE -->
+    <h1>Graphic<br>Designer &<br>Motion Video<br>Editor...</h1>
+    <!-- CHANGE YOUR SHORT DESCRIPTION HERE -->
+    <p class="hero-sub">Creative and detail-oriented Graphic Designer & Video Editor
+with a strong passion for visual storytelling, branding, and digital content creation.
+Skilled in creating engaging social media designs, promotional graphics,
+advertisements, and professional video content. Experienced in transforming
+creative ideas into visually appealing designs and impactful videos while
+maintaining brand consistency and quality. Always eager to learn new techniques,
+explore creative trends, and deliver high-quality work that meets client and business objectives.</p>
+    <a class="cta" href="#work">View My Work ↗</a>
+  </div>
+  <!-- YOUR PROFILE IMAGE: images/profile.jpg -->
+  <div class="hero-portrait"></div>
+  <div class="availability"><span class="dot"></span>Currently available for work</div>
+  <div class="stats">
+    <!-- CHANGE YOUR NUMBERS HERE -->
+    <div class="stat"><span>Projects Completed</span><strong>10+</strong></div>
+    <div class="stat"><span>Happy Clients</span><strong>10+</strong></div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="section-head"><div><p class="kicker">What I Do</p><h2>My Services</h2></div><a class="view-all" href="#contact">Let's Work Together ↗</a></div>
+  <div class="services">
+    <article class="service"><div class="icon">✦</div><h3>Graphic Design</h3><p>Social media designs, posters, branding and creative visuals.</p></article>
+    <article class="service"><div class="icon">▶</div><h3>Video Editing</h3><p>Professional videos, reels, ads, YouTube and short-form content.</p></article>
+    <article class="service"><div class="icon">◈</div><h3>Motion Graphics</h3><p>Engaging motion graphics, titles and visual effects.</p></article>
+    <article class="service"><div class="icon">▣</div><h3>Thumbnails</h3><p>Eye-catching thumbnails designed to boost clicks and views.</p></article>
+  </div>
+</section>
+
+<section class="portfolio" id="work">
+  <div><p class="kicker">Selected Work</p><h2>Featured Projects</h2></div>
+  <div class="portfolio-grid">
+    <!-- Replace images/project1.jpg and change the project title -->
+    <a class="project" href="#"><img src="images/project1.jpg" alt="Project 1"><div class="project-info"><small>Graphic Design</small><h3>Read Mood</h3></div></a>
+    <a class="project" href="#"><img src="images/project2.jpg" alt="Project 2"><div class="project-info"><small>Video Editing</small><h3>Visual Mood</h3></div></a>
+    <a class="project" href="#"><img src="images/project3.jpg" alt="Project 3"><div class="project-info"><small>Branding</small><h3>Project Title 03</h3></div></a>
+    <a class="project" href="#"><img src="images/project4.jpg" alt="Project 4"><div class="project-info"><small>Creative Content</small><h3>Project Title 04</h3></div></a>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div><p class="kicker">About Me</p><h2>Designing ideas that people remember.</h2></div>
+  <!-- CHANGE YOUR ABOUT TEXT HERE -->
+  <p>This is Farhan Tanvir, a passionate Graphic Designer & Video Editor dedicated to creating clean, modern, and engaging visual content.
+
+From branding and social media designs to video editing and promotional content, I turn ideas into visuals that connect with audiences and help brands grow.</p>
+</section>
+
+<section class="contact" id="contact">
+  <p class="kicker">Have a project in mind?</p>
+  <h2>Let's create something amazing together.</h2>
+  <p>Contact me and let's bring your ideas to life with creative design and engaging video content.</p>
+  <!-- CHANGE YOUR EMAIL HERE -->
+  <a class="contact-btn" href="mailto:tfarhan017@email.com">Email Me ↗</a>
+</section>
+</main>
+
+<footer>
+  <!-- CHANGE YOUR NAME HERE -->
+  <span>© 2026 Farhan Tanvir. All rights reserved.</span>
+  <span>Graphic Designer & Motion Video Editor</span>
+</footer>
+</div>
+</body>
+</html>
