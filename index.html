@@ -25,8 +25,303 @@ section{padding:90px 66px;background:var(--paper)}.kicker{font-size:13px;color:v
 .portfolio{background:#111214;color:#fff}.portfolio .kicker{color:#aaa}.portfolio-grid{margin-top:48px;display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.project{height:360px;border-radius:16px;overflow:hidden;position:relative;background:#333}.project img{width:100%;height:100%;object-fit:cover;transition:transform .35s}.project:hover img{transform:scale(1.05)}.project-info{position:absolute;inset:auto 0 0 0;padding:70px 28px 28px;background:linear-gradient(transparent,rgba(0,0,0,.85))}.project-info small{color:#ddd}.project-info h3{font:700 29px "Manrope";margin-top:7px}
 .about{display:grid;grid-template-columns:1fr 1fr;gap:80px}.about p{font-size:20px;line-height:1.65;color:#3d3e40}.contact{text-align:center;background:#ddd6cc}.contact h2{max-width:760px;margin:auto}.contact p{margin:24px auto;max-width:560px;color:var(--muted);font-size:18px;line-height:1.6}.contact-btn{display:inline-flex;gap:12px;padding:16px 24px;border-radius:8px;background:#111214;color:#fff;font-weight:700}
 footer{padding:28px 66px;background:#111214;color:#eee;display:flex;justify-content:space-between;font-size:14px}
-@media(max-width:900px){.page{width:100%;margin:0}nav{padding:0 24px}.links{display:none}.hero-copy{width:100%;padding:60px 28px}.hero-portrait{inset:260px 0 0 0;opacity:.72}.availability{left:28px;bottom:145px}section{padding:70px 28px}.services{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr;gap:25px}footer{padding:24px 28px}}
-@media(max-width:560px){.start{font-size:12px}.hero h1{letter-spacing:-3px}.services,.portfolio-grid{grid-template-columns:1fr}.stats{width:100%;height:105px}.section-head{align-items:start;flex-direction:column}footer{flex-direction:column;gap:8px}}
+/* =========================
+   RESPONSIVE MOBILE DESIGN
+   ========================= */
+
+@media (max-width: 900px) {
+
+  .page {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  nav {
+    height: 65px;
+    padding: 0 22px;
+  }
+
+  .logo {
+    font-size: 19px;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .start {
+    font-size: 12px;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 820px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-copy {
+    width: 100%;
+    padding: 48px 24px 0;
+    z-index: 4;
+  }
+
+  .hero h1 {
+    font-size: clamp(43px, 11vw, 68px);
+    line-height: .98;
+    letter-spacing: -3px;
+  }
+
+  .hero-sub {
+    margin-top: 24px;
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 1.6;
+
+    /* Mobile-এ description একটু ছোট রাখা */
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .cta {
+    margin-top: 22px;
+    font-size: 16px;
+  }
+
+  /* PROFILE IMAGE */
+  .hero-portrait {
+    position: absolute;
+    inset: auto 0 105px 0;
+    height: 390px;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(232,227,220,1) 0%,
+        rgba(232,227,220,.45) 20%,
+        rgba(232,227,220,0) 48%
+      ),
+      url("profile.JPG");
+
+    background-size: cover;
+    background-position: center top;
+    opacity: 1;
+  }
+
+  /* AVAILABILITY */
+  .availability {
+    left: 24px;
+    bottom: 125px;
+    font-size: 12px;
+    padding: 9px 15px;
+    gap: 8px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* STATS */
+  .stats {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 105px;
+  }
+
+  .stat span {
+    font-size: 12px;
+  }
+
+  .stat strong {
+    font-size: 23px;
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 65px 24px;
+  }
+
+  h2 {
+    font-size: clamp(38px, 10vw, 55px);
+    letter-spacing: -2px;
+  }
+
+  .section-head {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  /* SERVICES */
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 35px;
+  }
+
+  .service {
+    min-height: 175px;
+    padding: 20px;
+  }
+
+  .icon {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 18px;
+  }
+
+  .service h3 {
+    font-size: 17px;
+  }
+
+  .service p {
+    font-size: 13px;
+  }
+
+  /* PORTFOLIO */
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 35px;
+  }
+
+  .project {
+    height: 300px;
+  }
+
+  .project-info {
+    padding: 60px 22px 22px;
+  }
+
+  .project-info h3 {
+    font-size: 25px;
+  }
+
+  /* ABOUT */
+  .about {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .about p {
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  /* CONTACT */
+  .contact h2 {
+    font-size: 40px;
+  }
+
+  .contact p {
+    font-size: 16px;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 24px;
+    gap: 8px;
+    flex-direction: column;
+    font-size: 12px;
+  }
+}
+
+
+/* =========================
+   SMALL PHONES
+   ========================= */
+
+@media (max-width: 560px) {
+
+  nav {
+    padding: 0 18px;
+  }
+
+  .start {
+    font-size: 11px;
+  }
+
+  .hero {
+    min-height: 780px;
+  }
+
+  .hero-copy {
+    padding: 40px 20px 0;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+    letter-spacing: -2.5px;
+  }
+
+  .hero-sub {
+    font-size: 14px;
+    line-height: 1.55;
+    -webkit-line-clamp: 5;
+  }
+
+  .hero-portrait {
+    height: 350px;
+    bottom: 100px;
+    background-position: center top;
+  }
+
+  .availability {
+    left: 20px;
+    bottom: 120px;
+  }
+
+  .stats {
+    height: 100px;
+  }
+
+  .stat span {
+    font-size: 11px;
+  }
+
+  .stat strong {
+    font-size: 21px;
+  }
+
+  section {
+    padding: 55px 20px;
+  }
+
+  h2 {
+    font-size: 38px;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .service {
+    min-height: auto;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project {
+    height: 270px;
+  }
+
+  .about p {
+    font-size: 16px;
+  }
+
+  .contact h2 {
+    font-size: 35px;
+  }
+}
 </style>
 </head>
 <body>
