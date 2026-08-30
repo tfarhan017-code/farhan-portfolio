@@ -376,7 +376,28 @@ explore creative trends, and deliver high-quality work that meets client and bus
     <a class="project" href="#"><img src="project2.jpg" alt="Project 2"><div class="project-info"><small>Video Editing</small><h3>Visual Mood</h3></div></a>
     <a class="project" href="#"><img src="project3.jpg" alt="Project 3"><div class="project-info"><small>Branding</small><h3>Corporate Identity</h3></div></a>
     <a class="project" href="#"><img src="project4.jpg" alt="Project 4"><div class="project-info"><small>Creative Content</small><h3>Digital Campaigns</h3></div></a>
-     <a class="project" href="#"><img src="project1.jpg" alt="Project 1"><div class="project-info"><small>Graphic Design</small><h3>Read Mood</h3></div></a>
+     <div class="project">
+    <div class="project-images">
+        <img src="project1.jpg" alt="Read Mood Project 1" onclick="openGallery(0)">
+        <img src="project2.jpg" alt="Read Mood Project 2" onclick="openGallery(1)">
+        <img src="project3.jpg" alt="Read Mood Project 3" onclick="openGallery(2)">
+    </div>
+
+    <div class="project-info">
+        <small>Graphic Design</small>
+        <h3>Read Mood</h3>
+    </div>
+</div>
+
+<!-- Gallery Popup -->
+<div id="gallery" class="gallery">
+    <span class="close" onclick="closeGallery()">&times;</span>
+
+    <img id="galleryImage" src="" alt="Gallery Image">
+
+    <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+    <button class="next" onclick="changeImage(1)">&#10095;</button>
+</div>
   </div>
 </section>
 
@@ -403,5 +424,105 @@ From branding and social media designs to video editing and promotional content,
   <span>Graphic Designer & Motion Video Editor</span>
 </footer>
 </div>
+   <script>
+const images = [
+    "project1.jpg",
+    "project2.jpg",
+    "project3.jpg"
+];
+
+let currentImage = 0;
+
+function openGallery(index) {
+    currentImage = index;
+    document.getElementById("galleryImage").src = images[currentImage];
+    document.getElementById("gallery").style.display = "flex";
+}
+
+function closeGallery() {
+    document.getElementById("gallery").style.display = "none";
+}
+
+function changeImage(direction) {
+    currentImage += direction;
+
+    if (currentImage < 0) {
+        currentImage = images.length - 1;
+    }
+
+    if (currentImage >= images.length) {
+        currentImage = 0;
+    }
+
+    document.getElementById("galleryImage").src = images[currentImage];
+}
+</script>
 </body>
 </html>
+.project-images {
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.project-images img {
+    width: 33.33%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.project-images img:hover {
+    transform: scale(1.03);
+}
+
+/* Gallery */
+.gallery {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery img {
+    max-width: 85%;
+    max-height: 85%;
+    object-fit: contain;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 30px;
+}
+
+.next {
+    right: 30px;
+}
